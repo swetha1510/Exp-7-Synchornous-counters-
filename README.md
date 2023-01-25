@@ -1,7 +1,11 @@
 # Exp-6-Synchornous-counters - up counter and down counter 
-### AIM: To implement 4 bit up and down counters and validate  functionality.
+### AIM:
+To implement 4 bit up and down counters and validate  functionality.
+
 ### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
+
 ### SOFTWARE REQUIRED:   Quartus prime
+
 ### THEORY 
 
 ## UP COUNTER 
@@ -46,43 +50,70 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 4-bit Count Down Counter
 ### Procedure
-/* write all the steps invloved */
+### 1.Using if statement construct a 4bit UP counter.
 
+### 2.Repeat the same for 4bit DOWN counter.
 
+###3.Find RTL and Timing diagram for the both the counters.
+
+###4.End the program.
 
 ### PROGRAM 
-/*
+```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: SWETHA P
+RegisterNumber: 22008542
+
+###UP counter
+
+module uc(input CLK,input reset,output[0:3]counter);
+reg[0:3]counter_up;
+always@(posedge CLK or posedge reset)
+begin
+if(reset)
+counter_up <=4'd0;
+else
+counter_up <=counter_up+4'd1;
+end
+assign counter = counter_up;
+endmodule
+
+###DOWN counter
+module dc(input CLK,input reset,output[0:3]counter);
+reg[0:3]counter_down;
+always@(posedge CLK or posedge reset)
+begin
+if(reset)
+counter_down <=4'd0;
+else
+counter_down <=counter_down-4'd1;
+end
+assign counter = counter_down;
+endmodule
+```
+
+### RTL LOGIC
+###UP counter
+![UCRTL](https://user-images.githubusercontent.com/120623583/214594304-943d06d7-2ef1-44f0-be2f-ede15c4f0b12.png)
+
+###DOWN counter
+![DCRTL](https://user-images.githubusercontent.com/120623583/214595042-65c2968f-0511-4a06-b7b1-33114491439a.png)
 
 
+### TIMING DIGRAMS FOR COUNTER
+###UP counter
+![UCSIM](https://user-images.githubusercontent.com/120623583/214595278-db05bde9-8d41-4c3c-a83a-a6a15572051a.png)
 
-
-
-
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
-
-
-
-
-
-
-
-
-
-### TIMING DIGRAMS FOR COUNTER  
-
-
-
+###DOWN counter
+![DCSIM](https://user-images.githubusercontent.com/120623583/214595369-fcaaabd2-057c-45d6-9075-308bfeb4b484.png)
 
 
 ### TRUTH TABLE 
+###UP counter
+![uctruth](https://user-images.githubusercontent.com/120623583/214599020-f8bcc15c-a67d-4c3b-846c-a9a1b000f186.png)
 
-
-
-
-
+###DOWN counter
+![dctruth](https://user-images.githubusercontent.com/120623583/214599224-d8a59405-d540-4c84-a8c6-4b39043220c4.png)
 
 ### RESULTS 
+ Thus the UP counter and DOWN counter are designed and truthtable are verified using quartus software.
