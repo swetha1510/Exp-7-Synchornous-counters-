@@ -100,7 +100,8 @@ endmodule
 ![DCRTL](https://user-images.githubusercontent.com/120623583/214595042-65c2968f-0511-4a06-b7b1-33114491439a.png)
 
 
-### TIMING DIGRAMS FOR COUNTER
+### TIMING DIGRAMS FOR COUNTER 
+
 ###UP counter
 ![UCSIM](https://user-images.githubusercontent.com/120623583/214595278-db05bde9-8d41-4c3c-a83a-a6a15572051a.png)
 
@@ -110,9 +111,11 @@ endmodule
 
 ### TRUTH TABLE 
 ###UP counter
+
 ![uctruth](https://user-images.githubusercontent.com/120623583/214599020-f8bcc15c-a67d-4c3b-846c-a9a1b000f186.png)
 
 ###DOWN counter
+
 ![dctruth](https://user-images.githubusercontent.com/120623583/214599224-d8a59405-d540-4c84-a8c6-4b39043220c4.png)
 
 ### RESULTS 
